@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<module rename-to='imap'>
+    <!-- Inherit the schema Web Toolkit stuff.                        -->
+    <inherits name='com.google.gwt.inject.Inject'/>
+    <inherits name='com.google.gwt.user.cellview.CellView'/>
+    <inherits name='com.google.gwt.logging.Logging'/>
+
+    <!-- Logging setup -->
+    <set-property name="gwt.logging.enabled" value="TRUE"/>
+    <set-property name="gwt.logging.logLevel" value="SEVERE"/>
+    <set-property name="gwt.logging.consoleHandler" value="ENABLED"/>
+    <set-property name="gwt.logging.developmentModeHandler" value="ENABLED"/>
+    <set-property name="gwt.logging.firebugHandler" value="ENABLED"/>
+    <set-property name="gwt.logging.hasWidgetsHandler" value="DISABLED"/>
+    <set-property name="gwt.logging.popupHandler" value="DISABLED"/>
+    <set-property name="gwt.logging.systemHandler" value="ENABLED"/>
+    <set-property name="gwt.logging.simpleRemoteHandler" value="DISABLED"/>
+
+    <!-- Other module inherits                                      -->
+    <inherits name='com.gwtplatform.dispatch.DispatchRest'/>
+    <inherits name="com.vividcode.imap.common.Common"/>
+    <inherits name="com.gwtplatform.mvp.MvpWithEntryPoint"/>
+
+    <!--Google maps API-->
+    <inherits name='com.google.gwt.maps.Maps' />
+
+    <source path='client'/>
+
+    <extend-configuration-property name="gin.ginjector.modules" value="com.vividcode.imap.app.client.gin.ClientModule"/>
+    <set-configuration-property name="gwtp.bootstrapper" value="com.vividcode.imap.app.client.gin.BootstrapperImpl"/>
+</module>

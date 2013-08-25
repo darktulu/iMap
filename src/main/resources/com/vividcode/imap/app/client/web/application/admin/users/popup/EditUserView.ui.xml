@@ -1,0 +1,23 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'
+             xmlns:s='urn:import:com.vividcode.imap.common.client.widget'
+             xmlns:b='urn:import:com.github.gwtbootstrap.client.ui'
+             xmlns:e='urn:import:com.vividcode.imap.app.client.web.application.admin.users.ui'>
+
+    <ui:with field="resource" type="com.vividcode.imap.common.client.resource.SharedResources"/>
+
+    <g:PopupPanel styleName="{resource.popupStyleCss.gwtPopupPanel}"
+                  glassEnabled="true" modal="true" autoHideEnabled="false">
+        <g:FlowPanel>
+            <s:ModalHeader ui:field="modalHeader" text="Editer un utilisateur"/>
+
+            <g:HTMLPanel styleName="{resource.popupStyleCss.popupBody}">
+                <e:UserEditor ui:field="userEditor"/>
+            </g:HTMLPanel>
+
+            <g:HTMLPanel styleName="{resource.sharedStyleCss.buttonContainerPopup}">
+                <b:Button ui:field="save" text="Enregistrer" icon="SAVE" styleName="btn btn-primary"/>
+            </g:HTMLPanel>
+        </g:FlowPanel>
+    </g:PopupPanel>
+</ui:UiBinder>

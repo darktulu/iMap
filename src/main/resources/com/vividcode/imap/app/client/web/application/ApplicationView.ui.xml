@@ -1,0 +1,38 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+    <ui:style>
+        .mainWrapper {
+            padding: 10px;
+            background-color: #f5f5f5;
+        }
+
+        .menuWrapper {
+            width: 810px;
+            margin: auto;
+        }
+
+        .menuStyle {
+            background-color: #f5f5f5;
+        }
+    </ui:style>
+
+    <g:SimpleLayoutPanel>
+        <g:DockLayoutPanel unit='PX'>
+            <g:north size="50">
+                <g:HTMLPanel>
+                    <g:SimplePanel ui:field="headerDisplay"/>
+                </g:HTMLPanel>
+            </g:north>
+
+            <g:center>
+                <g:SimpleLayoutPanel ui:field="mainDisplay" styleName="{style.mainWrapper}"/>
+            </g:center>
+
+            <g:north size="50">
+                <g:SimpleLayoutPanel addStyleNames="{style.menuStyle}">
+                    <g:SimpleLayoutPanel ui:field="menuDisplay" addStyleNames="{style.menuWrapper}"/>
+                </g:SimpleLayoutPanel>
+            </g:north>
+        </g:DockLayoutPanel>
+    </g:SimpleLayoutPanel>
+</ui:UiBinder>

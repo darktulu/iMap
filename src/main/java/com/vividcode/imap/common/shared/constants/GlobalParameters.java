@@ -10,6 +10,9 @@ public class GlobalParameters {
     public static Double MOR_LAT = 31.79170;
     public static Double MOR_LNG = -7.09262;
 
+    public static Double CASA_LAT = 33.535099029737715;
+    public static Double CASA_LNG = -7.581939697265625;
+
     public static final String WIDTH_MAP = "100%";
     public static final String HEIGHT_MAP = "600px";
 }

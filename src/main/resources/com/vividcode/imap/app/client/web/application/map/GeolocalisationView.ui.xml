@@ -9,11 +9,15 @@
         .wrapper {
             margin: auto;
         }
+
+        .map_canvas img {
+            max-width: none;
+        }
     </ui:style>
     <g:HTMLPanel addStyleNames="{style.body}">
 
         <div class="{style.wrapper}">
-            <g:SimplePanel ui:field="geoPanel"/>
+            <g:SimplePanel ui:field="geoPanel" styleName="{style.map_canvas}"/>
         </div>
     </g:HTMLPanel>
 </ui:UiBinder>
